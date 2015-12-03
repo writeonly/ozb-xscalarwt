@@ -1,3 +1,3 @@
-scalaVersion := "2.9.3"
+scalaVersion := "2.11.7"
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")

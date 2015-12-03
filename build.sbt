@@ -4,17 +4,27 @@ name := "ozb-xscalawt"
 
 version := "0.1"
 
-scalaVersion := "2.9.3"
+scalaVersion := "2.11.7"
+
+resolvers +=
+		"Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+//
+//resolvers +=
+//    "SWT repo" at "http://maven-eclipse.github.io/maven"
+
+resolvers +=
+    "Jabylon" at "http://www.jabylon.org/maven"
+
 
 libraryDependencies ++= Seq(
-	"org.eclipse.jface" % "jface" % "3.7.0",
-	"org.eclipse.equinox" % "equinox-common" % "3.6.0",
-	"org.eclipse.core" % "core-databinding" % "1.4.0",
-	"org.eclipse.core" % "core-commands" % "3.6.0",
-	"org.eclipse.core" % "core-databinding-observable" % "1.4.0",
-	"org.eclipse.core" % "core-databinding-beans" % "1.2.100",
-	"org.eclipse.jface" % "jface-databinding" % "1.5.0",
-	"org.eclipse.core" % "core-databinding-property" % "1.4.0"
+	"org.eclipse" % "jface" % "3.9.1",
+	"org.eclipse.equinox" % "common" % "3.6.200",
+	"org.eclipse.core" % "databinding" % "1.4.1",
+	"org.eclipse.core" % "commands" % "3.6.1",
+	"org.eclipse.core.databinding" % "observable" % "1.4.0",
+	"org.eclipse.core.databinding" % "beans" % "1.2.100",
+	"org.eclipse.jface" % "databinding" % "1.5.0",
+	"org.eclipse.core.databinding" % "property" % "1.4.0"
 	// Note : the SWT native library will be downloaded and placed in to /lib on first update.
 	//        To this end, set the "swtNativeUrl" setting value
 )
