@@ -29,21 +29,23 @@
 <!--    <artifactId>jface-databinding</artifactId> -->
    <artifactId>databinding</artifactId>
 <!--    <version>1.7.0</version> -->
-   <version>LATEST</version>
+<!--    <version>LATEST</version>  -->
+ <version>1.1.0-I20070606-0010</version>
   </dependency>
   
    <dependency>
    <groupId>org.eclipse.equinox</groupId>
-   <artifactId>equinox-common</artifactId>
+   <artifactId>common</artifactId>
 <!--    <version>3.7.0</version> -->
    <version>LATEST</version>
   </dependency>
    
    <dependency>
    <groupId>org.eclipse.core</groupId>
-   <artifactId>core-databinding</artifactId>
+   <artifactId>databinding</artifactId>
 <!--    <version>1.5.0</version> -->
-   <version>LATEST</version>
+<!--    <version>LATEST</version>-->
+ <version>1.0.0-I20070606-0010</version>
   </dependency>
 
    <dependency>
