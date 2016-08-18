@@ -1,0 +1,176 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>org.ozb</groupId>
+
+ <artifactId>ozb-xscalawt</artifactId>
+ <packaging>jar</packaging>
+ <version>0.2</version>
+
+ <properties>
+  <maven.compiler.source>1.8</maven.compiler.source>
+  <maven.compiler.target>1.8</maven.compiler.target>
+  <encoding>UTF-8</encoding>
+  <scala.version>2.11.8</scala.version>
+ </properties>
+
+ <dependencies>
+ 
+<!--    <dependency> -->
+<!--    <groupId>org.eclipse.jface</groupId> -->
+<!--    <groupId>org.eclipse</groupId> -->
+<!--    <artifactId>jface</artifactId> -->
+<!--    <version>3.11.0</version> -->
+<!--    <version>LATEST</version> -->
+<!--   </dependency> -->
+  
+  <dependency>
+    <groupId>org.mod4j.org.eclipse</groupId>
+    <artifactId>jface</artifactId>
+    <version>3.5.0</version>
+</dependency>
+   <dependency>
+   <groupId>org.eclipse.jface</groupId>
+<!--    <artifactId>jface-databinding</artifactId> -->
+   <artifactId>databinding</artifactId>
+<!--    <version>1.7.0</version> -->
+<!--    <version>LATEST</version>  -->
+ <version>1.1.0-I20070606-0010</version>
+  </dependency>
+  
+   <dependency>
+   <groupId>org.eclipse.equinox</groupId>
+   <artifactId>common</artifactId>
+<!--    <version>3.7.0</version> -->
+   <version>LATEST</version>
+  </dependency>
+   
+   <dependency>
+   <groupId>org.eclipse.core</groupId>
+   <artifactId>databinding</artifactId>
+<!--    <version>1.5.0</version> -->
+<!--    <version>LATEST</version>-->
+ <version>1.0.0-I20070606-0010</version>
+  </dependency>
+
+<!--    <dependency> -->
+<!--    <groupId>org.eclipse.core</groupId> -->
+<!--    <artifactId>databinding-observable</artifactId> -->
+<!--    <version>1.5.0</version> -->
+<!--    <version>LATEST</version> -->
+<!--   </dependency> -->
+
+<!-- https://mvnrepository.com/artifact/org.mod4j.org.eclipse.core.databinding/observable -->
+<dependency>
+    <groupId>org.mod4j.org.eclipse.core.databinding</groupId>
+    <artifactId>observable</artifactId>
+    <version>1.2.0</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.eclipse.core.databinding</groupId>
+    <artifactId>beans</artifactId>
+<!--    <version>1.3.0</version> -->
+<!--    <version>LATEST</version> -->
+    <version>1.0.0-I20070606-0010</version>
+</dependency>
+
+
+<!--    <dependency> -->
+<!--    <groupId>org.eclipse.core</groupId> -->
+<!--    <artifactId>core-databinding-property</artifactId> -->
+<!--    <version>1.5.0</version> -->
+<!--    <version>LATEST</version> -->
+<!--   </dependency> -->
+  
+<!-- https://mvnrepository.com/artifact/org.mod4j.org.eclipse.core.databinding/property -->
+<dependency>
+    <groupId>org.mod4j.org.eclipse.core.databinding</groupId>
+    <artifactId>property</artifactId>
+    <version>1.2.0</version>
+</dependency>
+
+  
+<!--      <dependency> -->
+<!--    <groupId>org.eclipse.core</groupId> -->
+<!--    <artifactId>core-commands</artifactId> -->
+<!--    <version>3.7.0</version> -->
+<!--    <version>LATEST</version> -->
+<!--   </dependency> -->
+<!-- https://mvnrepository.com/artifact/org.mod4j.org.eclipse.core/commands -->
+<dependency>
+    <groupId>org.mod4j.org.eclipse.core</groupId>
+    <artifactId>commands</artifactId>
+    <version>3.5.0</version>
+</dependency>
+
+
+
+<!-- 	// Mac OS X SWT lib -->
+<!-- 	"org.eclipse.swt"  % "swt-cocoa-macosx-x86_64" % "3.104.1" -->
+<!-- 	// Windows SWT lib -->
+<!-- 	//"org.eclipse.swt"  % "swt-win32-win32-x86_64" % "3.104.1" -->
+<!-- 	// Linux SWT lib -->
+<!-- 	//"org.eclipse.swt"  % "swt-gtk-linux-x86_64" % "3.104.1" -->
+ 
+<!--       <dependency> -->
+<!--    <groupId>org.eclipse.swt</groupId> -->
+<!--    <artifactId>swt-gtk-linux-x86_64</artifactId> -->
+<!--    <version>LATEST</version> -->
+<!--   </dependency> -->
+ 
+ <!-- https://mvnrepository.com/artifact/org.eclipse.swt/org.eclipse.swt.win32.win32.x86 -->
+<dependency>
+    <groupId>org.eclipse.swt</groupId>
+    <artifactId>org.eclipse.swt.win32.win32.x86</artifactId>
+    <version>4.3</version>
+</dependency>
+ 
+ 
+
+  <!-- SWT -->
+<!--   <dependency> -->
+<!--    <groupId>org.eclipse.swt</groupId> -->
+   <!-- <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId> -->
+<!--    <artifactId>org.eclipse.swt.gtk.linux.x86_64</artifactId> -->
+<!--    <version>4.3</version> -->
+<!--   </dependency> -->
+
+<!--   <dependency> -->
+<!--    <groupId>org.eclipse</groupId> -->
+<!--    <artifactId>jface</artifactId> -->
+<!--    <version>3.3.0-I20070606-0010</version> -->
+<!--   </dependency> -->
+  
+
+
+ </dependencies>
+
+ <build>
+  <sourceDirectory>src/main/scala</sourceDirectory>
+  <testSourceDirectory>src/test/scala</testSourceDirectory>
+   <plugins>
+   <plugin>
+    <groupId>org.scala-tools</groupId>
+    <artifactId>maven-scala-plugin</artifactId>
+    <version>2.15.0</version>
+    <executions>
+     <execution>
+      <goals>
+       <goal>compile</goal>
+       <goal>testCompile</goal>
+      </goals>
+      <configuration>
+       <args>
+       </args>
+      </configuration>
+     </execution>
+    </executions>
+   </plugin>
+
+  </plugins>
+ </build>
+
+
+</project>
