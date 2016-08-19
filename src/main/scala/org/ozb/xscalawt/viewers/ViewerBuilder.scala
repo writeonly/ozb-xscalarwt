@@ -22,6 +22,7 @@ import org.eclipse.jface.viewers.TreeViewer
 import org.eclipse.jface.layout.TreeColumnLayout
 import org.eclipse.swt.events.SelectionListener
 import org.eclipse.jface.viewers.CheckboxTableViewer
+import org.eclipse.swt.widgets.Layout;
 
 /**
  * Base class for Table/TreeViewerBuilder
@@ -31,9 +32,10 @@ import org.eclipse.jface.viewers.CheckboxTableViewer
 abstract class ViewerBuilder[A](parent: Composite, style: Int) {
 	// or we could check if parent has no children and no layout set,
 	// but this is more reliable
-	val composite = new Composite(parent, SWT.NONE)
+	val composite = new Composite(parent, SWT.NONE);
 
-	def layout: AbstractColumnLayout
+	def layout: AbstractColumnLayout;
+	//def layout: Layout;
 	
 	def setLayoutData(data: Object): Unit = composite.setLayoutData(data)
 

@@ -134,7 +134,8 @@ abstract class ViewerColumnBuilder[A, B](builder: ViewerBuilder[A], valueGetter:
 		val baseColumn = this.baseColumn(column)
 
 		baseColumn.setText(header)
-		builder.layout.setColumnData(baseColumn, _layoutData)
+		import org.eclipse.jface.layout.AbstractColumnLayout
+		builder.layout.asInstanceOf[org.eclipse.jface.layout.AbstractColumnLayout].setColumnData(baseColumn, _layoutData)
 
 		column.setLabelProvider(_labelProvider)
 
